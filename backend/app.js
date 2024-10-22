@@ -1,31 +1,19 @@
 const express = require('express');
-
 const { errors } = require('celebrate');
-
 const dotenv = require('dotenv');
-
 const mongoose = require('mongoose');
-
 const cors = require('cors');
-
 const { validateSignUp, validateLogin } = require('./utils/validation');
-
 const userController = require('./controllers/users');
-
 const authorization = require('./middlewares/auth');
-
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 dotenv.config();
-
-mongoose.connect(process.env.MONGO_DB);
+//mongoose.connect(process.env.MONGO_DB);
 
 const app = express();
-
 const usersRoute = require('./routes/users');
-
 const cardsRoute = require('./routes/cards');
-
 const { PORT = 3001 } = process.env;
 
 app.use(express.json());
