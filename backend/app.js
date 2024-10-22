@@ -9,7 +9,7 @@ const authorization = require('./middlewares/auth');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 dotenv.config();
-//mongoose.connect(process.env.MONGO_DB);
+mongoose.connect(process.env.MONGO_DB);
 
 const app = express();
 const usersRoute = require('./routes/users');
