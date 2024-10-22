@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/sancoroso1/web_project_around_auth/static/css/main.2ff01f1a.css",
+    "main.js": "/sancoroso1/web_project_around_auth/static/js/main.95a34f2c.js",
+    "static/js/845.b72f63c8.chunk.js": "/sancoroso1/web_project_around_auth/static/js/845.b72f63c8.chunk.js",
+    "static/media/Inter-Medium.woff2": "/sancoroso1/web_project_around_auth/static/media/Inter-Medium.19e05b2238d4f2d8d3d5.woff2",
+    "static/media/Inter-Black.woff2": "/sancoroso1/web_project_around_auth/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
+    "static/media/Inter-Regular.woff2": "/sancoroso1/web_project_around_auth/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
+    "static/media/like__button.svg": "/sancoroso1/web_project_around_auth/static/media/like__button.99043841e8bec6b9df21.svg",
+    "index.html": "/sancoroso1/web_project_around_auth/index.html",
+    "main.2ff01f1a.css.map": "/sancoroso1/web_project_around_auth/static/css/main.2ff01f1a.css.map",
+    "main.95a34f2c.js.map": "/sancoroso1/web_project_around_auth/static/js/main.95a34f2c.js.map",
+    "845.b72f63c8.chunk.js.map": "/sancoroso1/web_project_around_auth/static/js/845.b72f63c8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2ff01f1a.css",
+    "static/js/main.95a34f2c.js"
+  ]
+}
