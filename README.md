@@ -38,4 +38,4 @@
 * Se crean los componentes para Likes, eliminar tarjetas, editar perfil, editar avatar y añadir nuevas tarjetas.
 
 ## LINKS
-* [GIT Page](https://sancoroso1.github.io/web_project_around_react/)
+* [Web Page](coroso.mooo.com)
