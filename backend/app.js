@@ -9,7 +9,12 @@ const authorization = require('./middlewares/auth');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 dotenv.config();
-mongoose.connect(process.env.MONGO_DB);
+
+mongoose.connect(process.env.MONGO_DB).then(() => {
+  console.log('Conexión exitosa a la base de datos');
+}).catch((err) => {
+  console.log('Error al conectarse a la base de datos', err);
+});
 
 const app = express();
 const usersRoute = require('./routes/users');
@@ -40,4 +45,4 @@ app.use((err, req, res, next) => {
   });
   next(new Error('Error de autorización'));
 });
-app.listen(PORT);
+app.listen(PORT, () => {console.log(`App listening on port ${PORT}`);});

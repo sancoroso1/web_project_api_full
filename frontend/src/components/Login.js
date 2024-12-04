@@ -8,7 +8,7 @@ function Login({ handleLogin }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const history = useHistory();
-  const handleRegisterError = '';
+  const [handleRegisterError, setHandleRegisterError] = useState('');
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -16,14 +16,14 @@ function Login({ handleLogin }) {
       .authorize(email, password)
       .then((res) => {
         if (res === undefined) {
-          handleRegisterError('fail');
+          setHandleRegisterError('fail');
         }
         handleLogin();
         history.push('/');
       })
       .catch((error) => {
         if (error.response && error.response.status === 500) {
-          handleRegisterError('fail');
+          setHandleRegisterError('fail');
         } else {
           console.error(error);
         }

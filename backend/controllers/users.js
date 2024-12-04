@@ -74,16 +74,17 @@ module.exports.login = (req, res, next) => {
 
   User.findOne({ email })
     .select('+password')
-    .then((user) => {
+    .then(async (user) => {
       if (!user) {
         const error = new Error('Email o contraseña incorrectos.');
-        error.status = 404;
+        error.name = 'ValidationError';
+        error.status = 401;
         throw error;
       }
-
       return bcrypt.compare(password, user.password).then((isMatched) => {
         if (!isMatched) {
           const error = new Error('Email o contraseña incorrectos.');
+          error.name = 'ValidationError';
           error.status = 401;
           throw error;
         }
@@ -97,7 +98,7 @@ module.exports.login = (req, res, next) => {
       if (err.name === 'ValidationError') {
         res.status(ERROR_INVALID_DATA).send({ message: 'Datos invalidos' });
       } else {
-        res.status(ERROR_FETCH).send({ message: 'Error' });
+        res.status(ERROR_FETCH).send({ message: err.message });
       }
     });
 };
