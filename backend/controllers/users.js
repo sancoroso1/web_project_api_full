@@ -17,7 +17,7 @@ const ERROR_INVALID_DATA = 400;
 module.exports.getUsers = (req, res) => {
   User.find({})
     .then((users) => res.send({ data: users }))
-    .catch(() => res.status(ERROR_FETCH).send({ message: 'Error' }));
+    .catch(() => res.status(ERROR_FETCH).send({ message: 'Error getUsers' }));
 };
 
 module.exports.getUsersById = (req, res) => {
@@ -35,7 +35,7 @@ module.exports.getUsersById = (req, res) => {
       if (err.name === 'CastError') {
         res.status(ERROR_INVALID_DATA).send({ message: 'Datos invalidos' });
       } else {
-        res.status(ERROR_FETCH).send({ message: 'Error' });
+        res.status(ERROR_FETCH).send({ message: 'Error getUsersById' });
       }
     });
 };
@@ -64,7 +64,7 @@ module.exports.createUser = (req, res) => {
       if (err.name === 'ValidationError') {
         res.status(ERROR_INVALID_DATA).send({ message: 'Datos invalidos' });
       } else {
-        res.status(ERROR_FETCH).send({ message: 'Error' });
+        res.status(ERROR_FETCH).send({ message: 'Error createUser' });
       }
     });
 };
@@ -98,7 +98,7 @@ module.exports.login = (req, res, next) => {
       if (err.name === 'ValidationError') {
         res.status(ERROR_INVALID_DATA).send({ message: 'Datos invalidos' });
       } else {
-        res.status(ERROR_FETCH).send({ message: "hola" });
+        res.status(ERROR_FETCH).send({ message: "Error login" });
       }
     });
 };
@@ -113,7 +113,7 @@ module.exports.updateUser = (req, res) => {
       if (err.name === 'ValidationError') {
         res.status(ERROR_INVALID_DATA).send({ message: 'Datos invalidos' });
       } else {
-        res.status(ERROR_FETCH).send({ message: 'Error' });
+        res.status(ERROR_FETCH).send({ message: 'Error updateUser' });
       }
     });
 };
@@ -128,7 +128,7 @@ module.exports.updateAvatar = (req, res) => {
       if (err.name === 'ValidationError') {
         res.status(ERROR_INVALID_DATA).send({ message: 'Datos invalidos' });
       } else {
-        res.status(ERROR_FETCH).send({ message: 'Error' });
+        res.status(ERROR_FETCH).send({ message: 'Error updateAvatar' });
       }
     });
 };
@@ -148,7 +148,7 @@ module.exports.getCurrentUser = (req, res) => {
       if (err.name === 'CastError') {
         res.status(ERROR_INVALID_DATA).send({ message: 'Datos invalidos' });
       } else {
-        res.status(ERROR_FETCH).send({ message: 'Error' });
+        res.status(ERROR_FETCH).send({ message: 'Error getCurrentUser' });
       }
     });
 };
