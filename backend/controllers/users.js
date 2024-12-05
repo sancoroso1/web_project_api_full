@@ -98,7 +98,7 @@ module.exports.login = (req, res, next) => {
       if (err.name === 'ValidationError') {
         res.status(ERROR_INVALID_DATA).send({ message: 'Datos invalidos' });
       } else {
-        res.status(ERROR_FETCH).send({ message: err.message });
+        res.status(ERROR_FETCH).send({ message: "hola" });
       }
     });
 };
